@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="mn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Үйл ажиллагаанууд - Num Volunteer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#006d48",
+                        "on-primary-fixed": "#002114",
+                        "surface-container": "#eceeed",
+                        "inverse-primary": "#95d4b3",
+                        "surface-tint": "#2c694e",
+                        "on-surface-variant": "#404943",
+                        "background": "#f8faf9",
+                        "on-tertiary-container": "#89edba",
+                        "on-primary-fixed-variant": "#0e5138",
+                        "on-surface": "#191c1c",
+                        "on-secondary-fixed": "#001e2f",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#37627f",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#c9e6ff",
+                        "surface-container-highest": "#e1e3e2",
+                        "surface": "#f8faf9",
+                        "surface-variant": "#e1e3e2",
+                        "secondary": "#386380",
+                        "tertiary-fixed": "#92f7c3",
+                        "surface-container-low": "#f2f4f3",
+                        "inverse-on-surface": "#eff1f0",
+                        "outline": "#707973",
+                        "outline-variant": "#bfc9c1",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#1d4b67",
+                        "primary-fixed-dim": "#95d4b3",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container-high": "#e6e9e8",
+                        "primary": "#0f5238",
+                        "inverse-surface": "#2e3131",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary": "#005236",
+                        "primary-container": "#2d6a4f",
+                        "on-background": "#191c1c",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "secondary-fixed-dim": "#a1cced",
+                        "tertiary-fixed-dim": "#75daa8",
+                        "surface-bright": "#f8faf9",
+                        "on-primary-container": "#a8e7c5",
+                        "primary-fixed": "#b1f0ce",
+                        "secondary-container": "#b2dcfe",
+                        "surface-dim": "#d8dada"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-md shadow-[0_20px_40px_rgba(15,82,56,0.06)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<span class="text-2xl font-extrabold tracking-tighter text-emerald-900 dark:text-emerald-50">Num Volunteer</span>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-600 dark:border-emerald-400 pb-1 font-['Manrope'] tracking-tight font-bold" href="event.html">Events</a>
+<a class="text-emerald-900/60 dark:text-emerald-100/60 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors" href="impact.html">Impact</a>
+<a class="text-emerald-900/60 dark:text-emerald-100/60 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors" href="community.html">Community</a>
+<a class="text-emerald-900/60 dark:text-emerald-100/60 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors" href="registration.html">Registration</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full font-bold transition-transform active:scale-95 duration-200">
+                Join Us
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-24 max-w-7xl mx-auto px-6">
+<!-- Hero Header -->
+<header class="mb-16">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-primary mb-6">Үйл ажиллагаанууд</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
+                Бид байгаль дэлхийгээ хамгаалах, хамтын хүчээр эерэг өөрчлөлт авчрах зорилготой олон төрлийн сайн дурын ажлуудыг зохион байгуулдаг. Танд тохирох үйл ажиллагааг эндээс хайгаарай.
+            </p>
+</header>
+<!-- Search & Filter Section -->
+<section class="bg-surface-container-low p-8 rounded-[2rem] mb-20 shadow-sm">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none rounded-2xl text-on-surface focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Үйл ажиллагаа хайх..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-3">
+<div class="flex bg-surface-container-lowest p-1.5 rounded-2xl gap-1">
+<button class="px-5 py-2.5 bg-primary text-on-primary rounded-xl text-sm font-semibold">Бүгд</button>
+<button class="px-5 py-2.5 text-on-surface-variant hover:bg-surface-container-high rounded-xl text-sm font-semibold transition-colors">Цэвэрлэгээ</button>
+<button class="px-5 py-2.5 text-on-surface-variant hover:bg-surface-container-high rounded-xl text-sm font-semibold transition-colors">Сургалт</button>
+<button class="px-5 py-2.5 text-on-surface-variant hover:bg-surface-container-high rounded-xl text-sm font-semibold transition-colors">Мод тарих</button>
+</div>
+<button class="flex items-center gap-2 px-6 py-4 bg-surface-container-lowest text-on-surface-variant rounded-2xl font-semibold hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span>Хугацаа</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Upcoming Events Grid -->
+<section class="mb-24">
+<div class="flex items-end justify-between mb-10">
+<div>
+<span class="text-tertiary font-bold tracking-widest uppercase text-xs mb-2 block">Одоо болох</span>
+<h2 class="text-4xl font-bold text-on-surface">Удахгүй болох үйл ажиллагаа</h2>
+</div>
+<div class="hidden md:block h-px flex-1 mx-12 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-[0_40px_60px_rgba(15,82,56,0.08)] hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Group of diverse volunteers planting small saplings in a sunny field with rich dark soil and morning dew" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRMVH-kBmp6o14kT-R3xQIhq7GQakzmpUHVbJCNRE4gEDEjCQOAvQqf7rXZHFjGtHsCBmbZU8W54MbMe7GsFBd4wu7BzOBtUluGNrS97AxttTzhXcG2KTH034R2ehRFemVaLRshxVG-Z93bfrEhAvvToGBIYzsX1Q2_Cjqh-D-oGMpcsIXPfn926XzcA7JNjymEINw7ie3XrrOtZ-SQ8rsyhGp_OEV8OfD0F-NBrfntjNNkomo4_tcMsuE7J5CyZr46PhqVvLsrTIk"/>
+<div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-sm">
+<span class="text-xs font-bold text-primary">МОД ТАРИХ</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm mb-4">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>2024 оны 10-р сарын 12</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Төв аймгийн ногоон бүсийг сэргээх аян</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm mb-8">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Төв аймаг, Зуунмод</span>
+</div>
+<button class="w-full py-4 bg-surface-container-low text-primary font-bold rounded-2xl transition-all group-hover:bg-primary group-hover:text-on-primary">
+                            Дэлгэрэнгүй үзэх
+                        </button>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-[0_40px_60px_rgba(15,82,56,0.08)] hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Volunteers cleaning up a riverbank with blue sky reflections in the water, wearing gloves and holding recycled bags" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAga4R50DEZwdJa58vplCUZaUl_8FxkJ2EbipLMIIdWhIab232oMoJoeImSNj3gpiS7zzYZK86M9lLo3ByNsZGVQUka1hkQSCPhmXuYnR6SO6cgKwKoAd2kAiO36mYrJ11MWHLV3qnhQ2cOgE_Om6Qz-5uJ51r-lqz-ZvSqNiyzX9UL1ZHSGn2K7PN5FinuhtFPC7ixwyV2oG-pkze8H7Un9-ytex8hqtzKaPCHUu1-IazOJFPTJftITsvC8XwxO0t1Z1USz678vSJF"/>
+<div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-sm">
+<span class="text-xs font-bold text-primary">ЦЭВЭРЛЭГЭЭ</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm mb-4">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>2024 оны 10-р сарын 19</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Туул голын эрэг дагуух цэвэрлэгээ</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm mb-8">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Улаанбаатар, Баянзүрх дүүрэг</span>
+</div>
+<button class="w-full py-4 bg-surface-container-low text-primary font-bold rounded-2xl transition-all group-hover:bg-primary group-hover:text-on-primary">
+                            Дэлгэрэнгүй үзэх
+                        </button>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-[0_40px_60px_rgba(15,82,56,0.08)] hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Group of people in an outdoor educational workshop sitting in a circle on grass under large trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Hy3mgfCGqwO1nMPU2ISrtGqPS3RQDiyXy8Jkd1vuJlgb-w_D6wF5V3tsIxRDLQdn3DHwyDiIlwxWC5zh68qDp_wC2xc1WPlQAfQbazB9uQdIB9ZA9iAcGBTf2GSXqaM-pecxVtlU45esFF0hJwg74L84-hOwVw5s8UjqKIi_EktSn1WaohV0ZzLVktUh-jMYOSEishk1gy5tf_ne2z-G5RflRxG4Xr0s24GyKXvpb2PzxTz-EzX5LYMKJ2e2L8u0KRzLJ6x3di4B"/>
+<div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-sm">
+<span class="text-xs font-bold text-primary">СУРГАЛТ</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm mb-4">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>2024 оны 10-р сарын 25</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Хог хаягдлыг ангилах ур чадварын сургалт</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm mb-8">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Community Center, Төв танхим</span>
+</div>
+<button class="w-full py-4 bg-surface-container-low text-primary font-bold rounded-2xl transition-all group-hover:bg-primary group-hover:text-on-primary">
+                            Дэлгэрэнгүй үзэх
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Highlights (Editorial Bento Layout) -->
+<section class="mb-24 py-20 bg-surface-container-low rounded-[3rem] px-10">
+<div class="mb-12 text-center">
+<span class="text-tertiary font-bold tracking-widest uppercase text-xs mb-2 block">Бидний амжилт</span>
+<h2 class="text-4xl font-bold text-on-surface">Өнгөрсөн үйл ажиллагааны тойм</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="Wide shot of a lush green urban garden created by volunteers, vibrant flowers and community benches in soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC84QdLcqs_bO2dSZHvLOpdviEageu5dqVw3UXze5MnGUIeDUM77DhR08jHbBlfatNlm4MvB7VpE6hW--jkLakGp5foFsItcRzh5tTKeCnvznWGvE4PE09Ypve_jsjqf46gokevUv8jFHwYkxB6JfyQXuKcpWKlUAPozTHdYQcJwHOr7oi-2dK_Uf__Kc9sJHvmNM2wEPB_IsYConrJoFC24_Yj0ngv7o6IGsAAlVyCp1riLs7lPRFmyrWOVFwFXsVwcD2XAywyPdIh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-10 flex flex-col justify-end">
+<span class="text-tertiary-fixed font-bold text-sm mb-2">Хамгийн том төсөл</span>
+<h4 class="text-white text-3xl font-bold mb-2">Хотхоны ногоон байгууламж 2023</h4>
+<p class="text-white/80">Нийт 500 гаруй мод тарьж, 2 га талбайг цэцэрлэгжүүллээ.</p>
+</div>
+</div>
+<div class="md:col-span-2 relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="Close-up of hands wearing white gloves picking up plastic waste in a scenic mountain area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrESQ6Up6dykYa3uV7sZzCltGJ9CtbIHkVobVOdHxUZk9ndYYnxNtpin2nIN8x1MIi2S1_68nTfPFjXVj8AT0WOGtz3t71rBSdSbSDsFDJPMvNjed1S_XJm9l3htpEHfMGj6w1jdt-n8wBhU3PFVltAFpb_x9L2SE7sfcc_c7-fCDI15wjFCFnBo9FsUN_Dg_sXd0zvBYzl0-SAZick40sp4eqU92b2yBSXXg8JkjI6WEt6ZiNAacRntAHbw9HMj-h3vaEHNkSWG4R"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-8 flex flex-col justify-end">
+<h4 class="text-white text-xl font-bold">Хөвсгөл нуурын цэвэрлэгээ</h4>
+<p class="text-white/80 text-sm">3 тонн хог хаягдлыг цэвэрлэв.</p>
+</div>
+</div>
+<div class="md:col-span-1 relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="Aerial view of a community forest planting pattern on a hillside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFVAy92TkPhVi_bjduCmaSKWHWghuwln50MeITVKwt7wVogcHMOvCJIt42aYNTmk7IQl7FIobEeqb7TvZjv0i-JnldC5pUZgU4FfHeVM1r6niO0Is8B0S0rXpwvMrxk5Vikgx6cQNMPTQoo2jAPayMj5EhPlAt_gA8TON5N2qmmpuK_r465Zqzg1u-05iHl4JOgACIuN3anud5DT3IkRoQmPg-VlR6KlSGv1aJI9zpCLtnUIIxioXAOTPjONfzt4E3CQn8-dTAO-0S"/>
+<div class="absolute inset-0 bg-emerald-900/40 backdrop-blur-[2px] p-6 flex flex-col justify-center items-center text-center">
+<div class="text-tertiary-fixed text-4xl font-extrabold mb-2">15k+</div>
+<div class="text-white text-sm font-bold">Таригдсан мод</div>
+</div>
+</div>
+<div class="md:col-span-1 relative rounded-[2rem] overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container p-6 flex flex-col justify-center items-center text-center">
+<div class="text-tertiary-fixed text-4xl font-extrabold mb-2">200+</div>
+<div class="text-white text-sm font-bold">Үйл ажиллагаа</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Subscription -->
+<section class="relative bg-primary text-on-primary rounded-[3rem] p-12 md:p-20 overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-800/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+<div class="relative z-10 max-w-3xl mx-auto text-center">
+<span class="material-symbols-outlined text-tertiary-fixed text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">mail</span>
+<h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Шинэ үйл ажиллагааны мэдээлэл аваарай</h2>
+<p class="text-on-primary-container/80 text-lg mb-10 leading-relaxed">
+                    Долоо хоног бүр зохион байгуулагддаг сайн дурын ажлуудын мэдээллийг и-мэйлээрээ шууд хүлээн авч, бидэнтэй нэгдээрэй.
+                </p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-1 px-8 py-5 bg-white/10 border-white/20 rounded-2xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-tertiary-fixed transition-all text-lg backdrop-blur-sm" placeholder="Таны и-мэйл хаяг" type="email"/>
+<button class="px-10 py-5 bg-tertiary-fixed text-on-tertiary-fixed font-extrabold rounded-2xl hover:bg-white transition-all transform active:scale-95 shadow-xl">
+                        Бүртгүүлэх
+                    </button>
+</form>
+<p class="mt-6 text-sm text-on-primary-container/60 italic">Та хүссэн үедээ бүртгэлээ цуцлах боломжтой.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-emerald-50 dark:bg-emerald-900/20">
+<div class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-['Manrope'] font-bold text-emerald-900 text-xl">Num Volunteer</span>
+<p class="text-emerald-800/70 text-sm font-['Plus_Jakarta_Sans'] text-center md:text-left">© 2024 Num Volunteer. Cultivating a greener future together.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-emerald-800/70 font-['Plus_Jakarta_Sans'] text-sm hover:underline decoration-emerald-500/30 transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="text-emerald-800/70 font-['Plus_Jakarta_Sans'] text-sm hover:underline decoration-emerald-500/30 transition-opacity duration-300" href="#">Terms of Service</a>
+<a class="text-emerald-800/70 font-['Plus_Jakarta_Sans'] text-sm hover:underline decoration-emerald-500/30 transition-opacity duration-300" href="#">Contact Us</a>
+<a class="text-emerald-800/70 font-['Plus_Jakarta_Sans'] text-sm hover:underline decoration-emerald-500/30 transition-opacity duration-300" href="#">Press Kit</a>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white/90 dark:bg-emerald-950/90 backdrop-blur-xl shadow-[0_-10px_30px_rgba(15,82,56,0.08)] rounded-t-3xl flex justify-around items-center px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-100 rounded-full px-5 py-2 font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span>Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-900/50 dark:text-emerald-100/50 font-['Plus_Jakarta_Sans'] text-[10px] font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span>Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-900/50 dark:text-emerald-100/50 font-['Plus_Jakarta_Sans'] text-[10px] font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-900/50 dark:text-emerald-100/50 font-['Plus_Jakarta_Sans'] text-[10px] font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">person_add</span>
+<span>Join</span>
+</a>
+</nav>
+</body></html>
